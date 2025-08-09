@@ -1,0 +1,22 @@
+{
+  "name": "bagshalffull",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "packageManager": "pnpm@10.14.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:api": "pnpm --filter api dev",
+    "dev:rt": "pnpm --filter realtime dev",
+    "dev:all": "concurrently -n API,RT -c cyan,magenta \"pnpm dev:api\" \"pnpm dev:rt\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
+}
